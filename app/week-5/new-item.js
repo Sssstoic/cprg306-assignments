@@ -19,23 +19,23 @@ export default function NewItem() {
     event.preventDefault();
     const item = { name, quantity, category };
     console.log(item);
-    alert(`Name: ${name}, Quantity: ${quantity}, Category: ${category}`);
+    alert(`Added item: ${name}, Quantity: ${quantity}, Category: ${category}`);
     setName("");
     setQuantity(1);
     setCategory("produce");
   };
 
   return (
-    <form onSubmit={handleSubmit} className="bg-white p-4 shadow rounded">
+    <form onSubmit={handleSubmit} className="bg-white p-4 shadow rounded w-auto max-w-lg mx-auto">
       {/* Name field */}
       <div className="mb-4">
         <input
           type="text"
-          placeholder="Item name" // This should display "Item name"
+          placeholder="Item name"
           value={name}
           onChange={(e) => setName(e.target.value)}
           required
-          className="border p-2 w-full"
+          className="border p-2 w-full text-black"
         />
       </div>
 
@@ -65,7 +65,7 @@ export default function NewItem() {
         <select
           value={category}
           onChange={(e) => setCategory(e.target.value)}
-          className="border p-2 w-full"
+          className="border p-2 w-full text-black"
         >
           <option value="produce">Produce</option>
           <option value="dairy">Dairy</option>
@@ -81,7 +81,7 @@ export default function NewItem() {
         </select>
       </div>
 
-      {/* Submit button as a plus sign */}
+      {/* Submit button */}
       <button
         type="submit"
         className="bg-green-500 text-white p-2 rounded-full w-10 h-10 flex items-center justify-center shadow-md hover:bg-green-700"
