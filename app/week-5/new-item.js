@@ -27,7 +27,6 @@ export default function NewItem() {
 
   return (
     <form onSubmit={handleSubmit} className="bg-white p-4 shadow rounded w-auto max-w-lg mx-auto">
-      {/* Name field */}
       <div className="mb-4">
         <input
           type="text"
@@ -39,7 +38,6 @@ export default function NewItem() {
         />
       </div>
 
-      {/* Quantity counter */}
       <div className="flex items-center p-2 m-4 bg-white text-black w-36 border">
         <span className="text-base font-semibold flex-grow text-left">{quantity}</span>
         <button
@@ -60,7 +58,6 @@ export default function NewItem() {
         </button>
       </div>
 
-      {/* Category field */}
       <div className="mb-4">
         <select
           value={category}
