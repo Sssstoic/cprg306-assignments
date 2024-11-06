@@ -8,8 +8,8 @@ function Page() {
   const [selectedItemName, setSelectedItemName] = useState("");
 
   const handleItemSelect = (name) => {
-    const cleanName = name.split(",")[0].trim(); // Clean up the item name
-    setSelectedItemName(cleanName); // Update the selected item name
+    const cleanName = name.split(",")[0].trim(); 
+    setSelectedItemName(cleanName); 
   };
 
   return (
@@ -17,7 +17,7 @@ function Page() {
       <div className="flex-1">
         <h1 className="text-4xl font-bold mb-6 text-white">Shopping List</h1>
         
-        <ItemList onItemSelect={handleItemSelect} /> {/* Pass onItemSelect here */}
+        <ItemList onItemSelect={handleItemSelect} /> 
       </div>
     </main>
   );

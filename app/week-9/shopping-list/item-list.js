@@ -5,6 +5,7 @@ import Item from './item';
 import NewItem from './new-item'; 
 import MealIdeas from './meal-ideas'; 
 import items from './items.json';
+import { useUserAuth } from "../_utils/auth-context";
 
 function ItemList({ onItemSelect }) {
   const [sortBy, setSortBy] = useState('name');

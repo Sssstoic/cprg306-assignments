@@ -1,4 +1,5 @@
 "use client";
+import { useUserAuth } from "../_utils/auth-context";
 
 function Item({ name, quantity, category, onSelect }) {
   const handleClick = () => {
